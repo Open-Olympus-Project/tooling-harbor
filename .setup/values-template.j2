@@ -1,8 +1,8 @@
 expose:
   ingress:
     hosts:
-      core: ${fqdn}
-externalURL: "https://${fqdn}"
+      core: {{ fqdn }}
+externalURL: "https://{{ fqdn }}"
 annotations:
   cert-manager.io/cluster-issuer: letsencrypt
   ingress.kubernetes.io/ssl-redirect: "true"
