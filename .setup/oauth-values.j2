@@ -1,8 +1,8 @@
-{
+curl -s -i -X PUT -u "$harborUser:$harborPass" -H "Content-Type: application/json" https://{{ fqdn }}/api/v2.0/configurations -d '{
 "auth_mode": "oidc_auth",
 "oidc_name": "azure",
 "oidc_endpoint": "https://login.microsoftonline.com/{{ tenantid }}/v2.0",
 "oidc_client_id": "{{ clientid }}",
 "oidc_client_secret": "{{ clientsecret }}",
 "oidc_scope": "openid,profile,email"
-}
+}'
