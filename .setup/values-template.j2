@@ -4,7 +4,7 @@ expose:
       core: {{ fqdn }}
 externalURL: "https://{{ fqdn }}"
 annotations:
-  cert-manager.io/cluster-issuer: letsencrypt
+  cert-manager.io/cluster-issuer: letsencrypt-prod
   ingress.kubernetes.io/ssl-redirect: "true"
   ingress.kubernetes.io/proxy-body-size: "0"
   nginx.ingress.kubernetes.io/ssl-redirect: "true"
