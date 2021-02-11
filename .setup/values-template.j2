@@ -1,12 +1,13 @@
+externalURL: "https://{{ fqdn }}"
 expose:
   ingress:
     hosts:
       core: {{ fqdn }}
-externalURL: "https://{{ fqdn }}"
-annotations:
-  cert-manager.io/cluster-issuer: letsencrypt-prod
-  ingress.kubernetes.io/ssl-redirect: "true"
-  ingress.kubernetes.io/proxy-body-size: "0"
-  nginx.ingress.kubernetes.io/ssl-redirect: "true"
-  nginx.ingress.kubernetes.io/proxy-body-size: "0"
-  kubernetes.io/ingress.class: nginx
+    
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      ingress.kubernetes.io/ssl-redirect: "true"
+      ingress.kubernetes.io/proxy-body-size: "0"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/proxy-body-size: "0"
+      kubernetes.io/ingress.class: nginx
