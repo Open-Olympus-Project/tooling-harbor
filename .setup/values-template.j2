@@ -15,30 +15,11 @@ expose:
 persistence:
   persistentVolumeClaim:
     registry:
-      # Use the existing PVC which must be created manually before bound,
-      # and specify the "subPath" if the PVC is shared with other components
-      existingClaim: ""
-      # Specify the "storageClass" used to provision the volume. Or the default
-      # StorageClass will be used(the default).
-      # Set it to "-" to disable dynamic provisioning
-      storageClass: ""
-      subPath: ""
-      accessMode: ReadWriteOnce
-      size: 5Gi
+      size: 50Gi
     chartmuseum:
-      existingClaim: ""
-      storageClass: ""
-      subPath: ""
-      accessMode: ReadWriteOnce
-      size: 5Gi
+      size: 25Gi
     jobservice:
-      existingClaim: ""
-      storageClass: ""
-      subPath: ""
-      accessMode: ReadWriteOnce
-      size: 1Gi
-    # If external database is used, the following settings for database will
-    # be ignored
+      size: 5Gi
 
 metrics:
   enabled: true
