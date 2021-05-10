@@ -11,7 +11,7 @@ harbor:
       # is disabled, the port must be included in the command when pull/push
       # images. Refer to https://github.com/goharbor/harbor/issues/5291
       # for the detail.
-      enabled: false
+      enabled: true
       # The source of the tls certificate. Set it as "auto", "secret"
       # or "none" and fill the information in the corresponding section
       # 1) auto: generate the tls certificate automatically
