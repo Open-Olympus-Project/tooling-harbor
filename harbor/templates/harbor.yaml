@@ -1,0 +1,25 @@
+---
+apiVersion: goharbor.io/v1beta1
+kind: HarborCluster
+metadata:
+  name: harbor-cluster
+spec:
+  expose:
+    core:
+      ingress:
+        host: {{ .Values.ingress.host }}
+  externalURL: https://{{ .Values.ingress.host }}
+  harborAdminPasswordRef: "myAdminPwd" # Required
+  storage:
+    # Kind of which storage service to be used. Only support MinIO now.
+    kind: MinIO # Required
+    # MinIO configurations
+    spec: # Required
+      redirect: # Required
+        # Determine if the redirection of minio storage is enabled.
+        enable: true # Optional, default=true
+      # Reference to the secret containing the MinIO access key and secret key.
+      replicas: 4 # Required, minimal=1
+      # Number of persistent volumes that will be attached per server
+      # Specially, 'replicas'*'volumesPerServer' should be >=4.
+      volumesPerServer: 1 # Required, minimal=1
