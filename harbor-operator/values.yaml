@@ -4,7 +4,7 @@ image:
   # image.pullPolicy -- The image pull policy for the controller.
   pullPolicy: IfNotPresent
   # image.tag -- The image tag whose default is the chart appVersion.
-  tag: "v1.0.1"
+  tag: "dev"
 
 # installCRDs -- If true, CRD resources will be installed as part of the Helm chart. If enabled, when uninstalling CRD resources will be deleted causing all installed custom resources to be DELETED
 installCRDs: false
@@ -248,3 +248,20 @@ tolerations: []
 #   }
 # }`
 affinity: {}
+
+redisoperator:
+  # redisoperator.enabled -- Whether to enabled [Redis Operator](https://github.com/spotahome/redis-operator)
+  enabled: true
+  rbac:
+    install: true
+
+minio-operator:
+  # minio-operator.enabled -- Whether to enabled [MinIO Operator](https://github.com/minio/operator)
+  enabled: true
+
+postgres-operator:
+  # postgres-operator.enabled -- Whether to enabled [Postgres operator](https://github.com/zalando/postgres-operator)
+  enabled: true
+
+  configKubernetes:
+    secret_name_template: "{username}.{cluster}.credentials"
