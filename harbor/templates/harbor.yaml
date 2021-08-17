@@ -1,6 +1,6 @@
 #https://github.com/goharbor/harbor-operator/blob/master/docs/CRD/custom-resource-definition.md
 ---
-apiVersion: goharbor.io/v1beta1
+apiVersion: goharbor.io/v1alpha3
 kind: HarborCluster
 metadata:
   name: harbor-cluster
