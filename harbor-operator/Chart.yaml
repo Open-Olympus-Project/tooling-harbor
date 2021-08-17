@@ -1,0 +1,9 @@
+apiVersion: v2
+appVersion: v1.0.1
+description: Deploy Harbor Operator
+home: https://github.com/goharbor/harbor-operator
+icon: https://branding.cncf.io/img/projects/harbor/icon/color/harbor-icon-color.svg
+kubeVersion: '>= 1.16.0-0'
+name: harbor-operator
+type: application
+version: v1.0.1
