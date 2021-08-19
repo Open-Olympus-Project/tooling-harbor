@@ -10,6 +10,18 @@ rules:
   - ""
   resources:
   - configmaps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
   - secrets
   - services
   verbs:
@@ -49,6 +61,18 @@ rules:
   - ""
   resources:
   - pods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - secrets
   verbs:
   - create
   - delete
@@ -199,6 +223,27 @@ rules:
 - apiGroups:
   - goharbor.io
   resources:
+  - chartmuseums/finalizers
+  - cores/finalizers
+  - exporters/finalizers
+  - jobservices/finalizers
+  - notaryservers/finalizers
+  - notarysigners/finalizers
+  - portals/finalizers
+  - registries/finalizers
+  - registrycontrollers/finalizers
+  - trivies/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - goharbor.io
+  resources:
   - chartmuseums/status
   verbs:
   - get
@@ -247,6 +292,18 @@ rules:
 - apiGroups:
   - goharbor.io
   resources:
+  - harborclusters/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - goharbor.io
+  resources:
   - harborclusters/status
   verbs:
   - get
@@ -255,7 +312,55 @@ rules:
 - apiGroups:
   - goharbor.io
   resources:
+  - harborconfigurations
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - goharbor.io
+  resources:
+  - harborconfigurations/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - goharbor.io
+  resources:
+  - harborconfigurations/status
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - goharbor.io
+  resources:
   - harbors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - goharbor.io
+  resources:
+  - harbors/finalizers
   verbs:
   - create
   - delete

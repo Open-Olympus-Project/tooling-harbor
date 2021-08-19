@@ -20,13 +20,19 @@ home: https://github.com/goharbor/harbor-operator
 icon: https://branding.cncf.io/img/projects/harbor/icon/color/harbor-icon-color.svg
 
 dependencies:
-# - name: redisoperator
-#   version: 3.1.0
-#   condition: redisoperator.enabled
-#   tags:
-#     - cache
-# - name: postgres-operator
-#   version: 1.6.3
-#   condition: postgres-operator.enabled
-#   tags:
-#     - database
+- name: minio-operator
+  version: 4.1.7
+  condition: minio-operator.enabled
+  repository: https://operator.min.io/
+  tags:
+    - storage
+- name: redisoperator
+  version: 3.1.0
+  condition: redisoperator.enabled
+  tags:
+    - cache
+- name: postgres-operator
+  version: 1.6.3
+  condition: postgres-operator.enabled
+  tags:
+    - database
