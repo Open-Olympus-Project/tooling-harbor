@@ -12,7 +12,7 @@ spec:
         host: {{ .Values.ingress.host }}
   externalURL: https://{{ .Values.ingress.host }}
   harborAdminPasswordRef: "myAdminPwd" # Required
-  storage:
+  inClusterStorage: # Optional
     # Kind of which storage service to be used. Only support MinIO now.
     kind: MinIO # Required
     # MinIO configurations
