@@ -5,7 +5,7 @@ kind: HarborCluster
 metadata:
   name: harbor-cluster
 spec:
-  version: "v2.3.1"
+  version: "2.3.1"
   expose:
     core:
       ingress:
